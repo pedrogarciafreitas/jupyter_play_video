@@ -2,6 +2,13 @@
 How to show videos in Jupyter notebooks
 
 ```python
+import matplotlib.pyplot as plt
+import matplotlib
+from matplotlib import animation
+from IPython.core.display import display, HTML
+matplotlib.rcParams['animation.ffmpeg_path'] = '/usr/bin/ffmpeg'
+
+
 def show_video_seq(image_array):
     matplotlib.rcParams['animation.embed_limit'] = 2**128
     dpi = 72.0
